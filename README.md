@@ -1,93 +1,46 @@
-# smooth_translate_android
+# Smooth Translate (Android)
 
+Ứng dụng phiên dịch đa năng cao cấp (All-in-One Translator) chuẩn theo mẫu iOS [Smooth Translate](https://apps.apple.com/us/app/smooth-translate/id6758365838?l=vi), chạy **100% Offline / On-Device** sử dụng **Google ML Kit Translate** và **ML Kit Text Recognition**.
 
+## 🌟 Tính năng nổi bật
 
-## Getting started
+1. **Dữ liệu dịch Offline hoàn toàn (Google ML Kit On-Device Translate)**:
+   - Miễn phí 100% vĩnh viễn, không giới hạn ký tự.
+   - Hỗ trợ hơn 50+ cặp ngôn ngữ (Anh, Việt, Nhật, Hàn, Trung, Pháp, Đức, Tây Ban Nha, v.v.).
+   - Khi cần gói ngôn ngữ nào, app tải model trực tiếp về máy (~30MB/gói) và thực hiện dịch hoàn toàn offline, không cần internet, bảo mật tuyệt đối.
+2. **Text Translate (Dịch văn bản)**:
+   - Giao diện chuẩn capsule xanh bo tròn kèm cờ quốc gia và nút đảo chiều ngôn ngữ xoay 180° mượt mà.
+   - Hộp nhập liệu trực quan: dán nhanh (Paste), xoá nhanh (Clear), đếm ký tự.
+   - Kết quả dịch với tính năng phát âm Text-To-Speech (TTS), sao chép (Copy), chia sẻ (Share) và lưu danh sách lịch sử / yêu thích.
+3. **Photo & Camera Translate (Dịch qua Camera / Ảnh)**:
+   - Tích hợp **Android CameraX** chụp trực tiếp hoặc chọn ảnh từ thư viện (Gallery).
+   - Nhận diện ký tự OCR bằng **Google ML Kit Vision Text Recognition** ngay trên máy.
+   - Dịch offline sang ngôn ngữ đích và hiển thị bóng thoại / callout card đè lên màn hình theo phong cách nguyên mẫu.
+4. **Voice Translate (Dịch giọng nói)**:
+   - Micro thu âm với hiệu ứng sóng âm (Soundwave Visualizer) và vòng xung lực động (Pulsating rings).
+   - Nhận diện giọng nói -> Dịch offline tức thì -> Tự động phát âm bằng giọng đọc tự nhiên (TTS).
+5. **Face-To-Face Translation (Dịch đối thoại trực tiếp 2 người)**:
+   - Màn hình chia đôi độc đáo: Nửa trên xoay 180° hướng về phía người đối diện, nửa dưới hướng về bạn.
+   - Mỗi bên có nút micro và bộ chọn ngôn ngữ riêng biệt.
+   - Đàm thoại 2 chiều song ngữ liên tục theo thời gian thực kèm đọc phát âm song song.
+6. **Offline Language Models Manager (Quản lý dữ liệu tải về)**:
+   - Xem dung lượng lưu trữ trên thiết bị.
+   - Tải 1 chạm bất kỳ gói ngôn ngữ nào.
+   - Xoá gói khi không dùng để giải phóng bộ nhớ.
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+## 🛠 Công nghệ sử dụng
+- **Ngôn ngữ**: Kotlin (2.0.20)
+- **UI Toolkit**: Jetpack Compose + Material 3 (Typography, HSL Color Palette, Custom Shapes & Shadow)
+- **Công cụ dịch Offline**: Google ML Kit Translate (`com.google.mlkit:translate:17.0.3`)
+- **Công cụ nhận diện OCR**: Google ML Kit Text Recognition (`com.google.mlkit:text-recognition:16.0.1`)
+- **Camera**: AndroidX CameraX (Core, Camera2, Lifecycle, View)
+- **Voice & TTS**: Android `SpeechRecognizer` + `android.speech.tts.TextToSpeech`
+- **Gradle**: 8.9, Android Gradle Plugin (AGP) 8.5.2, Java 17
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
-
-## Add your files
-
-* [Create](https://docs.gitlab.com/user/project/repository/web_editor/#create-a-file) or [upload](https://docs.gitlab.com/user/project/repository/web_editor/#upload-a-file) files
-* [Add files using the command line](https://docs.gitlab.com/topics/git/add_files/#add-files-to-a-git-repository) or push an existing Git repository with the following command:
-
+## 🚀 Build & Run
+```bash
+# Biên dịch Kotlin & Compose
+./gradlew assembleDebug
 ```
-cd existing_repo
-git remote add origin https://gitlab.com/sondeptrai/smooth_translate_android.git
-git branch -M main
-git push -uf origin main
-```
-
-## Integrate with your tools
-
-* [Set up project integrations](https://gitlab.com/sondeptrai/smooth_translate_android/-/settings/integrations)
-
-## Collaborate with your team
-
-* [Invite team members and collaborators](https://docs.gitlab.com/user/project/members/)
-* [Create a new merge request](https://docs.gitlab.com/user/project/merge_requests/creating_merge_requests/)
-* [Automatically close issues from merge requests](https://docs.gitlab.com/user/project/issues/managing_issues/#closing-issues-automatically)
-* [Enable merge request approvals](https://docs.gitlab.com/user/project/merge_requests/approvals/)
-* [Set auto-merge](https://docs.gitlab.com/user/project/merge_requests/auto_merge/)
-
-## Test and Deploy
-
-Use the built-in continuous integration in GitLab.
-
-* [Get started with GitLab CI/CD](https://docs.gitlab.com/ci/quick_start/)
-* [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/user/application_security/sast/)
-* [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/topics/autodevops/requirements/)
-* [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/user/clusters/agent/)
-* [Set up protected environments](https://docs.gitlab.com/ci/environments/protected_environments/)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+File APK debug được tạo tại:
+`app/build/outputs/apk/debug/app-debug.apk`
