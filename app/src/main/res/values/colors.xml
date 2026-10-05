@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="brand_yellow">#FFD600</color>
+    <color name="brand_yellow_dark">#F0C000</color>
+    <color name="brand_yellow_light">#FFF4A3</color>
+    <color name="bg_light">#F8F9FA</color>
+    <color name="surface_white">#FFFFFF</color>
+    <color name="text_primary">#1C1C1E</color>
+    <color name="text_secondary">#8E8E93</color>
+    
+    <color name="card_green_start">#69E781</color>
+    <color name="card_green_end">#4CD964</color>
+    <color name="card_blue_start">#48C6EF</color>
+    <color name="card_blue_end">#4E9BFF</color>
+    <color name="card_orange_start">#FFB347</color>
+    <color name="card_orange_end">#FF8C38</color>
+    <color name="card_purple_start">#DA22FF</color>
+    <color name="card_purple_end">#9733EE</color>
+</resources>

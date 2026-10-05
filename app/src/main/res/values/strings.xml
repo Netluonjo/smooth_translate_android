@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Smooth Translate</string>
+    <string name="tab_text">Text</string>
+    <string name="tab_photo">Photo</string>
+    <string name="tab_voice">Voice</string>
+    <string name="tab_chat">Chat</string>
+    <string name="translate">Translate</string>
+    <string name="offline_models">Offline Models</string>
+</resources>
